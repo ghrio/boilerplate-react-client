@@ -1,12 +1,13 @@
 module.exports = {
-	purge: [],
-	darkMode: false, // or 'media' or 'class'
+	purge: ['./index.html', './src/**/*.{,js,ts,jsx,tsx}'],
+	darkMode: false, 
 	theme: {
 		extend: {},
 	},
 	variants: {},
 	plugins: [
-		import('postcss-import'),
-		import('tailwindcss'),
-		import('autoprefixer'),],
+		require('postcss-import'),
+		require('tailwindcss'),
+		require('autoprefixer'),
+	]
 };
